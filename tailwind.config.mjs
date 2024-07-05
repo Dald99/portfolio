@@ -3,6 +3,10 @@ export default {
     content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
     darkMode: 'class',
     theme: {
+        colors: {
+            blue: '#2c4b94',
+            lightblue: '#6f6fac'
+        },
         extend: {},
     },
     plugins: [],

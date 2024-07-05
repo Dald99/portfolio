@@ -42,12 +42,15 @@ const projects = [
 ---
 
 <section>
-    <h2 class="mb-4">Projects</h2>
-    <div class="projects">
+    <h2 class="mb-4 text-blue">Projects</h2>
+    <div class="w-[100%]">
         {projects.map(({title, description, link, github, image, tags}) => (
-                <article class="">
+                <article class="flex gap-x-20 items-center">
+                    <img
+                            class="w-[32rem] rounded-2xl shadow-2xl shadow-white/10 my-4" src={image}
+                            alt=`Imagen del proyecto: ${title}`>
                     <div>
-                        <h3>{title}</h3>
+                        <h3 class="text-3Exl">{title}</h3>
                         <p class="text-base font-normal text-gray-500 dark:text-gray-400">{description}</p>
                         <ul class="flex gap-x-4">
                             {tags.map(tag => (
@@ -56,10 +59,12 @@ const projects = [
                                     </li>
                             ))}
                         </ul>
-                        <Button text="Preview" href={link}/>
-                        <Button text="Code" href={github}/>
+                        <div class="flex">
+                            <Button text="Preview" href={link}/>
+                            <Button text="Code" href={github}/>
+                        </div>
                     </div>
-                    <img class="rounded shadow-2xl shadow-white/10 my-4" src={image} alt=`Imagen del proyecto: ${title}`>
+
                 </article>
         ))}
     </div>

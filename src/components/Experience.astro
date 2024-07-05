@@ -2,23 +2,29 @@
 import ExperienceItem from "./ExperienceItem.astro";
 const experience = [
     {
-        role: 'Software Engineer',
-        company: 'Google',
-        date: '2020 - Present',
-        description: 'Working on the Google Search team to improve the search experience for users.'
+        role: 'Backend Development Lead',
+        company: 'Fixer',
+        date: 'Apr 2023 - Present',
+        description: 'I lead and manage a backend development team, ensuring efficient and effective project execution. I design and maintain robust backend system architectures, implementing new features using AWS to enhance scalability and performance. Additionally, I collaborate closely with frontend teams to ensure seamless system functionality and a cohesive user experience.'
 
     },
     {
-        role: 'Software Engineer',
-        company: 'Facebook',
-        date: '2018 - 2020',
-        description: 'Worked on the Facebook Ads team to improve the relevance of ads shown to users.'
+        role: 'Backend Developer Intern',
+        company: 'Comisión Federal de Electricidad (CFE)',
+        date: 'Jan 2024 - Jun 2024',
+        description: 'Develop a REST API using the Flask framework in Python, ensuring efficient and scalable web services. Additionally, create Python scripts for MySQL database migration, facilitating smooth and seamless data transitions, and design secure and efficient MySQL databases.'
+    },
+    {
+        role: 'Web developer',
+        company: 'Konecta',
+        date: 'Jun 2022 - Dec 2022',
+        description: 'Develop frontends for various company websites using HTML, CSS, and JavaScript, ensuring visually appealing and responsive designs. Implement backend functionalities with PHP, providing robust server-side operations. Conduct thorough web testing and debugging to ensure high-quality and reliable performance.'
     }
 ]
 ---
 
 <section>
-    <h2 class="mb-4">Work Experience</h2>
+    <h2 class="mb-4 text-blue">Work Experience</h2>
     <ol class="relative border-s border-gray-200 dark:border-gray-700">
         {
             experience.map(({role, company, date, description}) => (
