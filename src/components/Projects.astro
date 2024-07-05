@@ -1,0 +1,66 @@
+---
+import Angular from "../components/icons/Angular.astro";
+import Aws from "../components/icons/Aws.astro";
+import Button from "./Button.astro";
+
+const tags = {
+    angular: {
+        name: "Angular",
+        icon: Angular,
+    },
+    aws: {
+        name: "AWS",
+        icon: Aws,
+    },
+};
+const projects = [
+    {
+        title: "Fixer Website",
+        description: "This is a description of project 1",
+        link: "https://example.com",
+        github: "https://github.com",
+        image: "/images/fixer.webp",
+        tags: [tags.angular, tags.aws],
+    },
+    // {
+    //     title: "Project 2",
+    //     description: "This is a description of project 2",
+    //     link: "https://example.com",
+    //     github: "https://github.com",
+    //     image: "/images/project2.png",
+    //     tags: ["Work", "Angular"],
+    // },
+    // {
+    //     title: "Project 3",
+    //     description: "This is a description of project 3",
+    //     link: "https://example.com",
+    //     github: "https://github.com",
+    //     image: "/images/project3.png",
+    //     tags: ["Angular", "Angular"],
+    // },
+];
+---
+
+<section>
+    <h2 class="mb-4">Projects</h2>
+    <div class="projects">
+        {projects.map(({title, description, link, github, image, tags}) => (
+                <article class="">
+                    <div>
+                        <h3>{title}</h3>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">{description}</p>
+                        <ul class="flex gap-x-4">
+                            {tags.map(tag => (
+                                    <li class="flex gap-x-1 pt-1 pb-3">
+                                        <tag.icon/>
+                                    </li>
+                            ))}
+                        </ul>
+                        <Button text="Preview" href={link}/>
+                        <Button text="Code" href={github}/>
+                    </div>
+                    <img class="rounded shadow-2xl shadow-white/10 my-4" src={image} alt=`Imagen del proyecto: ${title}`>
+                </article>
+        ))}
+    </div>
+</section>

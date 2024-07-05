@@ -1,0 +1,25 @@
+---
+import EducationItem from "./EducationItem.astro";
+const education = [
+    {
+        career: 'Computer Systems Engineering',
+        school: 'Instituto Tecnológico de Mexicali',
+        date: '2018 - 2024',
+    },
+    {
+        career: 'Programming Technician',
+        school: 'CECyTE BC Plantel Los Pinos',
+        date: '2015 - 2018',
+    }
+]
+---
+<section>
+    <h2 class="mb-4">Education</h2>
+    <ol class="relative border-s border-gray-200 dark:border-gray-700">
+        {education.map(exp => (
+                <li class="mb-10 ms-4">
+                    <EducationItem {...exp}/>
+                </li>
+        ))}
+    </ol>
+</section>
